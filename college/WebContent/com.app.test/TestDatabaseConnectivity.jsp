@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import ="com.app.model.dbconnect.*" %>
+<%@ page import ="com.app.dao.implementation.mongodb.dbconnection.*" %>
 <%@ page import ="com.mongodb.client.FindIterable" %>
 <%@ page import ="com.mongodb.DBCursor" %>
 <%@ page import ="com.mongodb.Cursor" %>
@@ -20,9 +20,8 @@
 
  <%! com.mongodb.MongoClient m ; %>
 <%
-	
 	try{
-	 m =  StudentDatabase.INSTANCE.getReference();
+	 m =  CollegeMongoDB.INSTANCE.getReference();
     System.out.println(m.getDatabase("d2").getCollection("c2").count());
 
 	}
@@ -57,7 +56,6 @@ finally{
 
 
 }
-  
 %>
 </body>
 </html>

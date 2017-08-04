@@ -1,6 +1,13 @@
 package com.app.dao;
 
-import com.app.student.Student;
+/*
+ * This is DAO interface for Student which can do 
+ * functions like
+ * UPDATE, DELETE, CREATE etc.
+ * 
+ * 
+ */
+import com.app.model.beans.student.Student;;
 
 public interface StudentDAO {
 
